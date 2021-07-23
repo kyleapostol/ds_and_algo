@@ -1,4 +1,5 @@
-import { mergeRanges } from './array_and_string_manipulation.js'
+import { mergeRanges } from './merging_meeting.js';
+import { reverseString, reverseWords } from './reverse_string_in_place.js';
 
 const testArr = [
     { startTime: 0,  endTime: 1 }, //9:00 - 9:30
@@ -7,8 +8,15 @@ const testArr = [
     { startTime: 10, endTime: 12 }, //2:00 - 3:00
     { startTime: 9,  endTime: 10 }, //1:30 - 2:00
 ];
+// mergeRanges(testArr);
 
-// const testArr =  [{ startTime: 2, endTime: 4 }, { startTime: 1, endTime: 3 },];
+const stringArr = ['H', 'E', 'L', 'L', 'O;'];
+const message = [ 'c', 'a', 'k', 'e', ' ',
+'p', 'o', 'u', 'n', 'd', ' ',
+'s', 't', 'e', 'a', 'l' ];
+
+reverseString(stringArr);
+
+console.log(reverseWords(message))
 
 
-mergeRanges(testArr);
