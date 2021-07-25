@@ -14,12 +14,38 @@ const reverseString = (arr) => {
         left++;
         right--;
     }
-
     return arr;
 }
 
+
 const reverseWords = (message) => {
-    return message.join('')
+
+    reverseCharacters(message, 0, message.length-1);
+
+    let currentWordStartIndex = 0;
+    for(let i = 0; i <= message.length; i++){
+
+        //Found the end of the current word!
+        if(message[i] === ' ' || i === message.length){
+            reverseCharacters(message, currentWordStartIndex, i - 1);
+            currentWordStartIndex = i + 1;
+        }
+    }
+
+
+    //reverse all the characters
+    function reverseCharacters(message, leftIndex, rightIndex){
+        while(leftIndex < rightIndex){
+            let temp = message[leftIndex];
+            message[leftIndex] = message[rightIndex];
+            message[rightIndex] = temp;
+        
+            leftIndex++;
+            rightIndex--;
+        };
+    }
+
+    return message;
 }
 
 export { reverseString, reverseWords };

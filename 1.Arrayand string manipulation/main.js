@@ -1,5 +1,7 @@
 import { mergeRanges } from './merging_meeting.js';
 import { reverseString, reverseWords } from './reverse_string_in_place.js';
+import { mergeArrays } from  './merging_arrays.js';
+
 
 const testArr = [
     { startTime: 0,  endTime: 1 }, //9:00 - 9:30
@@ -15,8 +17,14 @@ const message = [ 'c', 'a', 'k', 'e', ' ',
 'p', 'o', 'u', 'n', 'd', ' ',
 's', 't', 'e', 'a', 'l' ];
 
-reverseString(stringArr);
 
-console.log(reverseWords(message))
+// console.log(reverseWords(message));
 
+// console.log('Outcome: steal pound cake');
+
+
+const myArray = [3, 4, 6, 10, 11, 15];
+const alicesArray = [1, 5, 8, 12, 14, 19];
+
+console.log(mergeArrays(myArray, alicesArray));
 
