@@ -1,6 +1,7 @@
 import { mergeRanges } from './merging_meeting.js';
 import { reverseString, reverseWords } from './reverse_string_in_place.js';
 import { mergeArrays } from  './merging_arrays.js';
+import { isFirstComeFirstServed } from './order_checker.js'
 
 
 const testArr = [
@@ -24,7 +25,14 @@ const message = [ 'c', 'a', 'k', 'e', ' ',
 
 
 const myArray = [3, 4, 6, 10, 11, 15];
-const alicesArray = [1, 5, 8, 12, 14, 19];
+const alicesArray = [];
 
-console.log(mergeArrays(myArray, alicesArray));
+// console.log(mergeArrays(myArray, alicesArray));
 
+
+
+const takeOutOrders = [1, 3, 5];
+const dineInOrders = [2, 4, 6];
+const servedOrders = [1, 2, 4, 6, 5, 3];
+
+console.log(isFirstComeFirstServed(takeOutOrders, dineInOrders, servedOrders))
