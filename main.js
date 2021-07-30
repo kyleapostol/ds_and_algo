@@ -1,8 +1,8 @@
-import { mergeRanges } from './merging_meeting.js';
-import { reverseString, reverseWords } from './reverse_string_in_place.js';
-import { mergeArrays } from  './merging_arrays.js';
-import { isFirstComeFirstServed } from './order_checker.js'
-
+import { mergeRanges } from './1.Array_and_string_manipulation/merging_meeting.js';
+import { reverseString, reverseWords } from './1.Array_and_string_manipulation/reverse_string_in_place.js';
+import { mergeArrays } from  './1.Array_and_string_manipulation/merging_arrays.js';
+import { isFirstComeFirstServed } from './1.Array_and_string_manipulation/order_checker.js'
+import { hasPalindromePermutation } from '../2.Hashing_and_hash_tables/permutation_palindrome.js';
 
 const testArr = [
     { startTime: 0,  endTime: 1 }, //9:00 - 9:30
@@ -35,4 +35,7 @@ const takeOutOrders = [1, 3, 5];
 const dineInOrders = [2, 4, 6];
 const servedOrders = [1, 2, 4, 6, 5, 3];
 
-console.log(isFirstComeFirstServed(takeOutOrders, dineInOrders, servedOrders))
+// console.log(isFirstComeFirstServed(takeOutOrders, dineInOrders, servedOrders))
+
+
+console.log(hasPalindromePermutation("aabcbcd"));
