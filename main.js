@@ -2,7 +2,8 @@ import { mergeRanges } from './1.Array_and_string_manipulation/merging_meeting.j
 import { reverseString, reverseWords } from './1.Array_and_string_manipulation/reverse_string_in_place.js';
 import { mergeArrays } from  './1.Array_and_string_manipulation/merging_arrays.js';
 import { isFirstComeFirstServed } from './1.Array_and_string_manipulation/order_checker.js'
-import { hasPalindromePermutation } from '../2.Hashing_and_hash_tables/permutation_palindrome.js';
+import { hasPalindromePermutation } from './2.Hashing_and_hash_tables/permutation_palindrome.js';
+import  WorldCloudData  from './2.Hashing_and_hash_tables/word_cloud_data.js';
 
 const testArr = [
     { startTime: 0,  endTime: 1 }, //9:00 - 9:30
@@ -38,4 +39,7 @@ const servedOrders = [1, 2, 4, 6, 5, 3];
 // console.log(isFirstComeFirstServed(takeOutOrders, dineInOrders, servedOrders))
 
 
-console.log(hasPalindromePermutation("aabcbcd"));
+// console.log(hasPalindromePermutation("aabcbcd"));
+let sentence = 'Chocolate cake for dinner and pound cake for dessert';
+
+console.log(new WorldCloudData(sentence).wordsToCounts);
